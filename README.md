@@ -1,3 +1,3 @@
-# Express server
+# MAILER
 
-express sample server
+express with nodemailer

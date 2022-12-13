@@ -1,8 +1,11 @@
 {
-  "name": "express-server",
+  "name": "mailer",
   "version": "1.0.0",
-  "description": "express server with simple routes",
+  "description": "express with nodemailer",
   "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "node server",
     "dev": "nodemon server"
@@ -10,14 +13,14 @@
   "author": "Chambers",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.0.1",
+    "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "express": "^4.18.1",
+    "express": "^4.18.2",
     "jsonwebtoken": "^8.5.1",
-    "node-fetch": "^3.2.9"
+    "nodemailer": "^6.8.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.20"
   }
 }
