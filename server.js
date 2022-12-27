@@ -12,10 +12,11 @@ app.use(cors(corsOptions))
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
+app.use('/mail', require('./routes/mail'))
+app.use('/healthz', require('./routes/healthz'))
 app.use('/', express.static(path.join(__dirname, '/public')));
 
 app.use('/', require('./routes/root'))
-app.use('/mail', require('./routes/mail'))
 
 app.all('*', (req, res) => {
   res.status(404);
