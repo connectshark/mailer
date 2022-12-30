@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: mailer
+    env: node
+    region: singapore
+    plan: free
+    branch: main
+    healthCheckPath: /healthz
+    startCommand: npm run start
+    buildCommand: npm install
+    envVars:
+    - key: EMAIL_SERVICE_AUTH_USER
+      sync: false
+    - key: EMAIL_SERVICE_AUTH_PW
+      sync: false
+    - key: EMAIL_DEFAULT_FROM
+      sync: false
